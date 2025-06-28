@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Add the INTERNET permission here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AdminFoodApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdminFoodApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.OrderDetailsActivity"
+            android:exported="false" />
+        <!-- Activities -->
+        <activity
+            android:name=".ui.OrderManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CreateUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AdminProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.OutForDeliveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AllItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AddItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"></activity>
+        <!-- AddRestaurantActivity -->
+        <activity
+            android:name=".ui.AddRestaurantsActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ui.MyRestaurantsActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ui.ManageExistingRestaurantsActivity"
+            android:exported="true"></activity>
+    </application>
+
+</manifest>

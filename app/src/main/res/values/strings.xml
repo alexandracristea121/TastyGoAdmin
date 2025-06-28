@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Admin-Food-App</string>
+    <string name="default_web_client_id">183309017281-3u6oaktuphq15mr1t1iaumh0fs4u1ra0.apps.googleusercontent.com</string>
+    <string name="total_pay">Total Pay</string>
+
+</resources>

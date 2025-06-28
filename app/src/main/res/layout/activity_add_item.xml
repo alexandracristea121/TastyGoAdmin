@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.AddItemActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adauga Produs"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backButton"
+                app:layout_constraintBottom_toBottomOf="@+id/backButton" />
+
+            <Spinner
+                android:id="@+id/restaurantSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="40dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="24dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantSpinner" />
+
+            <EditText
+                android:id="@+id/foodName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="24dp"
+                android:hint="Introduce numele preparatului"
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/quantum_black_hint_text"
+                android:textSize="16sp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
+
+            <EditText
+                android:id="@+id/foodPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="24dp"
+                android:hint="Introdu Pretul"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/quantum_black_hint_text"
+                android:textSize="16sp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+            <TextView
+                android:id="@+id/selectImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="24dp"
+                android:drawableRight="@drawable/plus_round"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:text="Selecteaza Imagine"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodPrice" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView8"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectImage">
+
+                <ImageView
+                    android:id="@+id/selectedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="32dp"
+                    android:src="@drawable/add_image" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Descrierea preparatului"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:layout_marginTop="16dp"
+                android:hint="Adauga Descriere"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/quantum_black_hint_text"
+                android:textSize="16sp"
+                android:gravity="top"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Ingrediente"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <EditText
+                android:id="@+id/ingredient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginTop="16dp"
+                android:hint="Adauga Ingrediente"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/quantum_black_hint_text"
+                android:textSize="16sp"
+                android:background="@drawable/edittextshape"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AddItemButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background"
+                android:text="Adauga Produs"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

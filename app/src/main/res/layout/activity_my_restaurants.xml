@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurante"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        android:layout_marginStart="24dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addRestaurantButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adauga Restaurant"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/existingRestaurantsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Editeaza Restaurante Existente"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/addRestaurantButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/manageMenuItemsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gestioneaza Meniul"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/existingRestaurantsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

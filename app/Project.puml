@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+
+actor Admin
+
+rectangle "Admin Actions" {
+  (Sign Up) as UC1
+  (Login) as UC2
+  (View Menu) as UC3
+  (Place Order) as UC4
+  (Add Items to Order) as UC5
+  (Edit Profile) as UC6
+  (View Orders) as UC7
+  (View Orders for Delivery) as UC8
+  (Add Menu Item) as UC9
+  (Manage Menu Items) as UC10
+  (Admin Profile Management) as UC11
+  (Create User) as UC12
+  (Add Food Items to Firebase) as UC13
+  (Handle Pending Orders) as UC14
+  (Manage Pending Orders) as UC15
+  (Add New Food Item) as UC16
+  (Retrieve Menu Items) as UC17
+}
+
+' Admin Actions
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+Admin --> UC9
+Admin --> UC10
+Admin --> UC11
+Admin --> UC12
+Admin --> UC13
+Admin --> UC14
+Admin --> UC15
+Admin --> UC16
+Admin --> UC17
+
+' Use Case Relationships
+UC4 -[#green,dashed]-> UC5 : include
+UC6 -[#red,dashed]-> UC2 : extend
+UC1 --> UC2
+@enduml
